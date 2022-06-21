@@ -1,0 +1,22 @@
+//Method :1
+let arr = [3,1,5,7,4,9,3];
+let max=0;
+for(let i=0;i<arr.length;i++){
+    for(let j=i+1;j<arr.length;j++){
+        if(arr[j]-arr[i]>max)
+        max=(arr[j]-arr[i]);
+    }
+}console.log(max)
+
+//Method 2
+let arr = [3,5,1,7,4,9,3];
+let maxpro=0;
+let minsofar=arr[0];
+for(let i=0;i<arr.length;i++){
+    minsofar=Math.min(minsofar,arr[i]);
+    let profit = arr[i]-minsofar;
+    maxpro=Math.max(maxpro,profit)
+    }
+console.log(maxpro)
+
+//here first get min value and then substract it other value for max profit
